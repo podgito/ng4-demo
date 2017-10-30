@@ -1,0 +1,22 @@
+Test
+<input [(ngModel)]='username'>
+
+<p>Hello {{username}}!</p>
+
+<h3>Excel Demo</h3>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+    <td>Clean</td>
+    <td>Adjustment</td>
+    <td>Final</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1.23</td>
+      <td><input class="adjustment" [(ngModel)]="adjustment" type="number"></td>
+      <td>{{adjustment + 1.23}}</td>
+    </tr>
+  </tbody>
+</table>
