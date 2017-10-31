@@ -7,16 +7,25 @@ Test
 <table class="table table-bordered">
   <thead>
     <tr>
-    <td>Clean</td>
-    <td>Adjustment</td>
-    <td>Final</td>
+      <td>Name</td>
+      <td>Clean</td>
+      <td>Adjustment</td>
+      <td>Final</td>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>1.23</td>
-      <td><input class="adjustment" [(ngModel)]="adjustment" type="number"></td>
-      <td>{{adjustment + 1.23}}</td>
+    <tr *ngFor="let point of dataPoints">
+      <td>{{point.name}}</td>
+      <td>{{point.value}}</td>
+      <td>
+        <input class="adjustment" [(ngModel)]="point.adjustment" type="number">
+      </td>
+      <td>{{point.value + point.adjustment}}</td>
     </tr>
   </tbody>
 </table>
+
+
+<h3>Search/Filtering</h3>
+
+<h3>Pipes</h3>

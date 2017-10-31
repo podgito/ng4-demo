@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TestDataService} from '../test-data.service';
+import {DataPoint} from '../interfaces/data-point'
 @Component({
   selector: 'app-binding',
   templateUrl: './binding.component.html',
@@ -8,11 +9,11 @@ import { TestDataService} from '../test-data.service';
 export class BindingComponent implements OnInit {
 
   adjustment: number = 0;
-  data: Position[];
+  dataPoints: DataPoint[];
   constructor(private dataService: TestDataService) { }
 
   ngOnInit() {
-    //this.data = this.dataService.getData();
+    this.dataPoints = this.dataService.getData();
   }
 
 }

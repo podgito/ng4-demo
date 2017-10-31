@@ -1,4 +1,4 @@
-export class Position {
+export class DataPoint {
     name: string;
     value: number;
     adjustment: number;
