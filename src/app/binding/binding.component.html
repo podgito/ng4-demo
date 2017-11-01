@@ -4,20 +4,24 @@ Test
 <p>Hello {{username}}!</p>
 
 <h3>Excel Demo</h3>
+<div class="form-inline">
+  <label for="searchTerm">Search:</label>
+  <input type="text" class="form-control" [(ngModel)]="searchTerm" id="searchTerm">
+</div>
 <table class="table table-bordered">
   <thead>
     <tr>
       <td>Name</td>
       <td>Clean</td>
-      <td>Adjustment</td>
+      <td class="highlighted">Adjustment</td>
       <td>Final</td>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let point of dataPoints">
+    <tr *ngFor="let point of (dataPoints | dataPointFilter: searchTerm)">
       <td>{{point.name}}</td>
       <td>{{point.value}}</td>
-      <td>
+      <td class="highlighted">
         <input class="adjustment" [(ngModel)]="point.adjustment" type="number">
       </td>
       <td>{{point.value + point.adjustment}}</td>
@@ -25,7 +29,9 @@ Test
   </tbody>
 </table>
 
-
-<h3>Search/Filtering</h3>
-
-<h3>Pipes</h3>
+<h4>Demonstrated</h4>
+<ul>
+  <li>Two-way binding</li>
+  <li>Pipes</li>
+  <li>*ngFor</li>
+</ul>

@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BindingComponent } from './binding/binding.component';
 import { HomeComponent } from './home/home.component';
 import {TestDataService} from './test-data.service';
+import { DataPointFilterPipe } from './pipes/data-point-filter.pipe';
 
 const appRoutes: Routes = [
   { path: 'binding', component: BindingComponent },
@@ -17,7 +18,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     BindingComponent,
-    HomeComponent
+    HomeComponent,
+    DataPointFilterPipe
   ],
   imports: [
     BrowserModule,

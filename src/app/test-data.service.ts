@@ -8,9 +8,11 @@ export class TestDataService {
 
   getData(): DataPoint[] {
     return [
-      { name: 'Pos1', value: 12.23, adjustment: 0, final: null },
-      { name: 'Pos2', value: 12.23, adjustment: 0, final: null },
-      { name: 'Pos3', value: 12.23, adjustment: 0, final: null }
+      { name: 'Bond1', value: 12.23, adjustment: 0, final: null },
+      { name: 'Bond2', value: 12.23, adjustment: 0, final: null },
+      { name: 'Cash1', value: 12.23, adjustment: 0, final: null },
+      { name: 'Bond3', value: 12.23, adjustment: 0, final: null }
+      
     ]
   }
 
