@@ -7,9 +7,14 @@ import { BindingComponent } from './binding/binding.component';
 import { HomeComponent } from './home/home.component';
 import {TestDataService} from './test-data.service';
 import { DataPointFilterPipe } from './pipes/data-point-filter.pipe';
+import { LinksComponent } from './components/links/links.component';
+import { DeploymentComponent } from './components/deployment/deployment.component';
+import { ObservablesComponent } from './components/observables/observables.component';
 
 const appRoutes: Routes = [
   { path: 'binding', component: BindingComponent },
+  { path: 'links', component: LinksComponent },
+  { path: 'deployment', component: DeploymentComponent },
   { path: '', component: HomeComponent}
 ];
 
@@ -19,7 +24,10 @@ const appRoutes: Routes = [
     AppComponent,
     BindingComponent,
     HomeComponent,
-    DataPointFilterPipe
+    DataPointFilterPipe,
+    LinksComponent,
+    DeploymentComponent,
+    ObservablesComponent
   ],
   imports: [
     BrowserModule,
