@@ -1,7 +1,12 @@
-Test
-<input [(ngModel)]='username'>
+<h2>Data-binding</h2>
+<img src="https://docs.angularjs.org/img/Two_Way_Data_Binding.png" alt="data-binding">
 
-<p>Hello {{username}}!</p>
+<br />
+<input [(ngModel)]='username' placeholder="Type your name here...">
+
+<span *ngIf="username">Hello {{username}}!</span>
+
+
 
 <h3>Excel Demo</h3>
 <div class="form-inline">
