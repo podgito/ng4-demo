@@ -10,9 +10,12 @@ import { DataPointFilterPipe } from './pipes/data-point-filter.pipe';
 import { LinksComponent } from './components/links/links.component';
 import { DeploymentComponent } from './components/deployment/deployment.component';
 import { ObservablesComponent } from './components/observables/observables.component';
+import { ComponentDemoComponent } from './components/component-demo/component-demo.component';
+import { GreetingComponent } from './components/greeting/greeting.component';
 
 const appRoutes: Routes = [
   { path: 'binding', component: BindingComponent },
+  { path: 'components', component: ComponentDemoComponent },
   { path: 'links', component: LinksComponent },
   { path: 'deployment', component: DeploymentComponent },
   { path: '', component: HomeComponent}
@@ -27,7 +30,9 @@ const appRoutes: Routes = [
     DataPointFilterPipe,
     LinksComponent,
     DeploymentComponent,
-    ObservablesComponent
+    ObservablesComponent,
+    ComponentDemoComponent,
+    GreetingComponent
   ],
   imports: [
     BrowserModule,
