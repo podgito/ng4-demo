@@ -1,10 +1,24 @@
-<h2>Components</h2>
-<ul>
-  <li>Component Reuse</li>
-  <li>Component arguments</li>
-</ul>
+<div class="col-md-6">
 
-<input type="text" name="" id="" [(ngModel)]="name">
+  <h2>Components</h2>
+  <ul>
+    <li>Component Reuse</li>
+    <li>Component arguments</li>
+  </ul>
 
-<app-greeting [name]="name" greeting="Hello"></app-greeting>
-<app-greeting [name]="name" greeting="Hola"></app-greeting>
+  <h3>Greeting Component</h3>
+
+  <app-greeting greeting="Hello" name="Padraic"></app-greeting>
+
+
+  <input type="text" [(ngModel)]="name" placeholder="name">
+  <input type="text" [(ngModel)]="greeting" placeholder="greeting">
+
+  <b>
+    <app-greeting [name]="name" [greeting]="greeting"></app-greeting>
+  </b>
+
+</div>
+<div class="col-md-6">
+  <p></p>
+</div>
