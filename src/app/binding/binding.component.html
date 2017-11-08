@@ -1,42 +1,48 @@
-<h2>Data-binding</h2>
-<img src="https://docs.angularjs.org/img/Two_Way_Data_Binding.png" alt="data-binding">
+<h2>
+  Data-binding</h2>
 
-<br />
-<input [(ngModel)]='username' placeholder="Type your name here...">
+<div class="col-md-8">
+  <input [(ngModel)]='username' placeholder="Type your name here...">
 
-<span *ngIf="username">Hello {{username}}!</span>
+  <span *ngIf="username">Hello {{username}}!</span>
 
 
 
-<h3>Excel Demo</h3>
-<div class="form-inline">
-  <label for="searchTerm">Search:</label>
-  <input type="text" class="form-control" [(ngModel)]="searchTerm" id="searchTerm">
+  <h3>Excel Demo</h3>
+  <div class="form-inline">
+    <label for="searchTerm">Search:</label>
+    <input type="text" class="form-control" [(ngModel)]="searchTerm" id="searchTerm">
+  </div>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <td>Name</td>
+        <td>Clean</td>
+        <td class="highlighted">Adjustment</td>
+        <td>Final</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let point of (dataPoints | dataPointFilter: searchTerm)">
+        <td>{{point.name}}</td>
+        <td>{{point.value}}</td>
+        <td class="highlighted">
+          <input class="adjustment" [(ngModel)]="point.adjustment" type="number">
+        </td>
+        <td>{{point.value + point.adjustment}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4>Demonstrated</h4>
+  <ul>
+    <li>Two-way binding</li>
+    <li>Pipes</li>
+    <li>*ngFor</li>
+  </ul>
+
 </div>
-<table class="table table-bordered">
-  <thead>
-    <tr>
-      <td>Name</td>
-      <td>Clean</td>
-      <td class="highlighted">Adjustment</td>
-      <td>Final</td>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let point of (dataPoints | dataPointFilter: searchTerm)">
-      <td>{{point.name}}</td>
-      <td>{{point.value}}</td>
-      <td class="highlighted">
-        <input class="adjustment" [(ngModel)]="point.adjustment" type="number">
-      </td>
-      <td>{{point.value + point.adjustment}}</td>
-    </tr>
-  </tbody>
-</table>
-
-<h4>Demonstrated</h4>
-<ul>
-  <li>Two-way binding</li>
-  <li>Pipes</li>
-  <li>*ngFor</li>
-</ul>
+<div class="col-md-4">
+    <img src="https://docs.angularjs.org/img/Two_Way_Data_Binding.png" alt="data-binding">
+    
+</div>
