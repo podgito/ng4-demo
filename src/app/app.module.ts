@@ -12,6 +12,7 @@ import { DeploymentComponent } from './components/deployment/deployment.componen
 import { ObservablesComponent } from './components/observables/observables.component';
 import { ComponentDemoComponent } from './components/component-demo/component-demo.component';
 import { GreetingComponent } from './components/greeting/greeting.component';
+import { BitcoinPriceService } from './services/bitcoin-price.service';
 
 const appRoutes: Routes = [
   { path: 'binding', component: BindingComponent },
